@@ -6,9 +6,9 @@
 	
 	.film{
 		border:1px solid #cf70ae;
-		border-radius: 6px;
-		padding: 6px;
-		margin-bottom:6px;
+		border-radius: 5px;
+		padding: 5px;
+		margin-bottom: 5px;
 		position:relative;	
 	}
 	.pic{
@@ -55,10 +55,9 @@ function bondJSON(data){
 	//clears other clicked films
 	$('#films').html('');
 	//loop through films and add template
-	
-	$.each(data.games,function(i,item){
-		let myGame = bondTemplate(item);
-		$('<div></div>').html(myGame).appendTo('#films');
+	$.each(data.films,function(i,item){
+		let myFilm = bondTemplate(item);
+		$('<div></div>').html(myFilm).appendTo('#films');
 	});
 	
 	//$("#output").text(JSON.stringify(data));
@@ -72,23 +71,24 @@ function bondJSON(data){
 function bondTemplate(film){
 	return `
 		<div class="film">
-			<b>Film: </b>${film.Film}<br />
-			<b>Title: </b>${film.Title}<br />
-			<b>Year: </b>${film.Year}<br />
-			<b>Director: </b>${film.Director}<br />
-			<b>Producers: </b>${film.Producers}<br />
-			<b>Writers: </b>${film.Writers}<br />
-			<b>Composer: </b>${film.Composer}<br />
-			<b>Bond: </b>Sean ${film.Bond}<br />
-			<b>Budget: </b>${film.Budget}<br />
-			<b>Box Office: </b>${film.BoxOffice}<br />	
-		<div class="pic"><img src="thumbnails/${film.Image}" /></div>
+			<b>Film: </b>${film.Film}</br>
+			<b>Title: </b>${film.Title}</br>
+			<b>Year: </b>${film.Year}</br>
+			<b>Director: </b>${film.Director}</br>
+			<b>Producers: </b>${film.Producers}</br>
+			<b>Writers: </b>${film.Writers}</br>
+			<b>Composer: </b>${film.Composer}</br>
+			<b>Bond: </b>${film.Bond}</br>
+			<b>Budget: </b>${film.Budget}</br>
+			<b>Box Office:</b>${film.BoxOffice}</br>
+			<div class="pic"><img src="thumbnails/${film.Image}" /></div>
+		</div>
 	`;
 }
 </script>
 </head>
 	
-<body>
+	<body>
 	<h1>Bond Web Service</h1>
 		<a href="year" class="category">Bond Films By Year</a><br />
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
