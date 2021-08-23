@@ -113,3 +113,6 @@ function bondTemplate(film){
 		<div id="output">Results go here</div>
 	</body>
 </html>
+<!--
+01001010~01010010
+-->
