@@ -72,21 +72,22 @@ function bondJSON(data){
 function bondTemplate(film){
 	return `
 		<div class="film">
-			<b>Film:</b>${film.Film}<br />
-			<b>Title:</b>${film.Title}<br />
-			<b>Year:</b>${film.Year}<br />
-			<b>Director:</b>${film.Director}<br />
-			<b>Producers:</b>${film.Producers}<br />
-			<b>Writers:</b>${film.Writers}<br />
-			<b>Composer:</b>${film.Composer}<br />
-			<b>Bond:</b>Sean ${film.Bond}<br />
-			<b>Budget:</b>${film.Budget}<br />
-			<b>Box Office:</b>${film.BoxOffice}<br />	
+			<b>Film: </b>${film.Film}<br />
+			<b>Title: </b>${film.Title}<br />
+			<b>Year: </b>${film.Year}<br />
+			<b>Director: </b>${film.Director}<br />
+			<b>Producers: </b>${film.Producers}<br />
+			<b>Writers: </b>${film.Writers}<br />
+			<b>Composer: </b>${film.Composer}<br />
+			<b>Bond: </b>Sean ${film.Bond}<br />
+			<b>Budget: </b>${film.Budget}<br />
+			<b>Box Office: </b>${film.BoxOffice}<br />	
 		<div class="pic"><img src="thumbnails/${film.Image}" /></div>
-
+	`;
+}
 </script>
-
 </head>
+	
 <body>
 	<h1>Bond Web Service</h1>
 		<a href="year" class="category">Bond Films By Year</a><br />
